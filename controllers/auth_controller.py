@@ -64,7 +64,7 @@ def dashboard():
 
   return redirect('/login')
 
-@auth_controller.route('/logout', methods=['DELETE'])
+@auth_controller.route('/logout', methods=['POST'])
 def logout():
   session.pop('email', None)
-  return redirect('/login')
+  return redirect('/index')
